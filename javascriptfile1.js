@@ -1,2 +1,12 @@
-waitingFn(3000);
+function waitingFn(timeInMs){
+    const futureTime = Date.now() + timeInMs;
+    while( futureTime > Date.now()){
+        //waiting
+    }
+}
 
+
+
+
+debugger;
+waitingFn(3000);
