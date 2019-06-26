@@ -5,11 +5,18 @@
 <script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
 <title>Lon Hosford Basic CreateJS Shape Animation</title>
 <script>
-var stage;
+var stage, sunShape;
 function init()
 {
-    stage = new createjs.Stage("stage-canvas");
-alert(stage.canvas);
+stage = new createjs.Stage("stage-canvas");
+sunShape = new createjs.Shape();
+sunShape.graphics.beginFill("#F00");
+sunShape.graphics.drawCircle(0, 0, 25);
+sunShape.graphics.endFill();
+sunShape.x = 25;
+sunShape.y = 25;
+stage.addChild(sunShape);
+stage.update();
 }
 </script>
 <style>
@@ -33,4 +40,4 @@ padding-right: 0;
 This web browser does not support canvas.
 </canvas>
 </body>
-</html>    
+</html>
